@@ -2,6 +2,7 @@ public class Circulo {
     //4 niveles de acceso
     //public , private , protected , default
     //ae agrego herramienta del método de sobrecarga y el uso de exepciones 
+    //se genera las excepciones 
     protected double radio;
     
     public Circulo(){}
