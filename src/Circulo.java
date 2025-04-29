@@ -1,6 +1,7 @@
 public class Circulo {
     //4 niveles de acceso
     //public , private , protected , default
+    //ae agrego herramienta del método de sobrecarga y el uso de exepciones 
     protected double radio;
     
     public Circulo(){}
@@ -21,14 +22,18 @@ public class Circulo {
         return "Circulo{" + "radio=" + radio + '}';
     }
     
-    protected double calcularArea(){
-        if (this.getRadio() < 0)
-            { System.out.println("El radio es negativo");
-            return 0;}
-        else
-            return Math.PI*Math.pow(this.getRadio(),2);
+    protected double calcularArea(double radioTemp) {
+        if (radioTemp < 0) {
+            System.out.println("El radio es negativo");
+            return 0;
+        } else {
+            return Math.PI * Math.pow(radioTemp, 2);
+        }
     }
     protected double calcularLongitud(){ 
         return 2*Math.PI*this.getRadio();
     }
+    protected double calcularLongitud(double radioTemp) {
+        return 2 * Math.PI * radioTemp;
+    }
 }
